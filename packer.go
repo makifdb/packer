@@ -31,13 +31,6 @@ type Manager struct {
 	RemoveArg  []string
 }
 
-func main() {
-
-	mngr, _ := DedectManager()
-	fmt.Println(mngr.Name)
-
-}
-
 func DedectManager() (Manager, error) {
 	switch opsystem := osinfo.GetVersion().Runtime; opsystem {
 	default:
@@ -122,7 +115,7 @@ func Install(packageName string) error {
 
 	err = cmd.Run()
 	if err != nil {
-		log.Fatalf("Install failed with %s\n", err)
+		log.Printf("Install failed with %s\n", err)
 	}
 	return err
 }
@@ -147,7 +140,7 @@ func Remove(packageName string) error {
 
 	err = cmd.Run()
 	if err != nil {
-		log.Fatalf("Remove failed with %s\n", err)
+		log.Printf("Remove failed with %s\n", err)
 	}
 
 	return err
@@ -173,7 +166,7 @@ func Update() error {
 
 	err = cmd.Run()
 	if err != nil {
-		log.Fatalf("Update failed with %s\n", err)
+		log.Printf("Update failed with %s\n", err)
 	}
 
 	return err
