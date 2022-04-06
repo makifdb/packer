@@ -75,3 +75,11 @@ func main() {
 // output: yay
 
 ```
+
+6. Run Custom Command
+
+```go
+func main() {	
+	packer.Command("uname -a")
+}
+```
