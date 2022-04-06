@@ -78,11 +78,11 @@ func DetectManager() (Manager, error) {
 			} else if Check("flatpak") {
 				return flatpak, nil
 			} else {
-				return Manager{}, fmt.Errorf("No package manager found")
+				return Manager{}, fmt.Errorf("no package manager found")
 			}
 
 		}
-		return Manager{}, fmt.Errorf("No package manager found")
+		return Manager{}, fmt.Errorf("no package manager found")
 	}
 }
 
