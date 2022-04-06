@@ -65,11 +65,11 @@ func main() {
 }
 ```
 
-5. Dedect Package Manager
+5. Detect Package Manager
 
 ```go
 func main() {	
-	mngr, _ := DedectManager()
+	mngr, _ := DetectManager()
 	fmt.Println(mngr.Name)
 }
 // output: yay

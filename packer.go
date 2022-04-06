@@ -31,7 +31,7 @@ type Manager struct {
 	RemoveArg  []string
 }
 
-func DedectManager() (Manager, error) {
+func DetectManager() (Manager, error) {
 	switch opsystem := osinfo.GetVersion().Runtime; opsystem {
 	default:
 		// windows, freebsd, plan9 ...
@@ -96,7 +96,7 @@ func Check(packageName string) bool {
 }
 
 func Install(packageName string) error {
-	pkgManager, err := DedectManager()
+	pkgManager, err := DetectManager()
 	if err != nil {
 		return err
 	}
@@ -121,7 +121,7 @@ func Install(packageName string) error {
 }
 
 func Remove(packageName string) error {
-	pkgManager, err := DedectManager()
+	pkgManager, err := DetectManager()
 	if err != nil {
 		return err
 	}
@@ -147,7 +147,7 @@ func Remove(packageName string) error {
 }
 
 func Update() error {
-	pkgManager, err := DedectManager()
+	pkgManager, err := DetectManager()
 	if err != nil {
 		return err
 	}
