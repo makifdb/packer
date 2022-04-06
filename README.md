@@ -74,7 +74,7 @@ func main() {
 
 ```
 
-6. Run Custom Command
+6. Run a Custom Command
 
 ```go
 func main() {	
