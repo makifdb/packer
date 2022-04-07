@@ -26,7 +26,12 @@ Packer is a simple system package management tool for Go. Packer, helps you dete
 | RHEL                |                  |
 | MacOS               |                  |
 
-## Example Usage `import "github.com/makifdb/packer"`
+
+## Download
+
+You can simply run `go get github.com/makifdb/packer` to start using in your own code.
+
+## Examples
 
 1. Check package installation
 
